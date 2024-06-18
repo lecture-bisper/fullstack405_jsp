@@ -1,0 +1,43 @@
+plugins {
+//  사용 언어 설정, 기본값 java
+  id 'java'
+//  배포 파일 타입 설정, 기본값 war
+  id 'war'
+}
+
+//  프로젝트 패키지명
+group 'bitc.fullstack405'
+//  프로젝트 버전명
+version '1.0.0'
+
+//  종속성 패키지 파일이 있는 서버 주소
+repositories {
+  mavenCentral()
+}
+
+ext {
+//  프로그램 테스트 시 사용하는 JUnit 버전
+  junitVersion = '5.10.0'
+}
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+tasks.withType(JavaCompile) {
+  options.encoding = 'UTF-8'
+}
+
+//  프로젝트 종속성 라이브러리 목록
+dependencies {
+  compileOnly('jakarta.servlet:jakarta.servlet-api:6.0.0')
+
+  testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+  testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
+  // https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jsp-api
+  implementation 'org.apache.tomcat:tomcat-jsp-api:10.1.24'
+
+}
+
+test {
+useJUnitPlatform()}
