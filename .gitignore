@@ -30,5 +30,4 @@ bin/
 
 ### 추가 내용 ###
 .idea/
-!**/src/main/resources/**/bootstrap*.js
-!**/src/main/resources/**/bootstrap*.css
+**/src/main/resources/**/bootstrap*
