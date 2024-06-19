@@ -22,9 +22,13 @@
 </head>
 <body>
 <%
+//  setCharacterEncoding(문자셋) : 클라이언트에서 전달된 데이터를 지정한 문자셋으로 변환
   request.setCharacterEncoding("UTF-8");
+//  getParameter() 를 통해서 전달된 데이터는 기본적으로 String 타입
+//  getParameter(변수명)에서 사용한 변수명은 클라이언트에서 전달한 데이터의 이름이며, input 태그의 name 속성 값
   String id = request.getParameter("id");
   String gender = request.getParameter("gender");
+//  getParameterValues(변수명) : 클라이언트에서 지정한 이름으로 전달한 데이터를 배열로 가져옴
   String[] favo = request.getParameterValues("favo");
   String favoStr = "";
   if (favo != null) {
@@ -32,10 +36,13 @@
       favoStr += favo[i] + " ";
     }
   }
+//  textarea 태그의 데이터 가져오기
+//  
   String intro = request.getParameter("comment").replace("\r\n", "<br/>");
 %>
 <div class="container mt-5">
   <ul class="list-group">
+<%--    표현식으로 화면에 출력 --%>
     <li class="list-group-item">아이디 : <%= id %></li>
     <li class="list-group-item">성별 : <%= gender %></li>
     <li class="list-group-item">관심사항 : <%= favoStr %></li>

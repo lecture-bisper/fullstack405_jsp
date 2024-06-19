@@ -14,15 +14,15 @@
 
 <div class="container mt-5">
   <ul class="list-group">
-    <li class="list-group-item"><a href="Import.jsp" class="btn btn-link">page 지시어 import</a></li>
-    <li class="list-group-item"><a href="Error500.jsp" class="btn btn-link">기본 예외 발생</a></li>
-    <li class="list-group-item"><a href="ErrorTryCatch.jsp" class="btn btn-link">예외처리 - Try ~ catch</a></li>
-    <li class="list-group-item"><a href="ErrorPage.jsp" class="btn btn-link">page 지시어 errorPage, isErrorPage</a></li>
-    <li class="list-group-item"><a href="TrimWhiteSpace.jsp" class="btn btn-link">page 지시어 trimDirectiveWhitespaces</a></li>
-    <li class="list-group-item"><a href="AutoFlush.jsp" class="btn btn-link">page 지시어 AutoFlush</a></li>
-    <li class="list-group-item"><a href="IncludeMain.jsp" class="btn btn-link">include 지시어</a></li>
-    <li class="list-group-item"><a href="ScriptElements.jsp" class="btn btn-link">jsp script 사용하기</a></li>
-    <li class="list-group-item"><a href="RequestMain.jsp.jsp" class="btn btn-link">내장 객체 - request</a></li>
+    <li class="list-group-item"><a href="Import.jsp" target="_blank" class="btn btn-link">page 지시어 import</a></li>
+    <li class="list-group-item"><a href="Error500.jsp" target="_blank" class="btn btn-link">기본 예외 발생</a></li>
+    <li class="list-group-item"><a href="ErrorTryCatch.jsp" target="_blank" class="btn btn-link">예외처리 - Try ~ catch</a></li>
+    <li class="list-group-item"><a href="ErrorPage.jsp" target="_blank" class="btn btn-link">page 지시어 errorPage, isErrorPage</a></li>
+    <li class="list-group-item"><a href="TrimWhiteSpace.jsp" target="_blank" class="btn btn-link">page 지시어 trimDirectiveWhitespaces</a></li>
+    <li class="list-group-item"><a href="AutoFlush.jsp" target="_blank" class="btn btn-link">page 지시어 AutoFlush</a></li>
+    <li class="list-group-item"><a href="IncludeMain.jsp" target="_blank" class="btn btn-link">include 지시어</a></li>
+    <li class="list-group-item"><a href="ScriptElements.jsp" target="_blank" class="btn btn-link">jsp script 사용하기</a></li>
+    <li class="list-group-item"><a href="RequestMain.jsp" target="_blank" class="btn btn-link">내장 객체 - request</a></li>
   </ul>
 </div>
 </body>

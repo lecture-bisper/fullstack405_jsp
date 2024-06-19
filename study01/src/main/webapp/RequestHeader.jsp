@@ -26,10 +26,15 @@
 <div class="container mt-5">
   <h2>3. 요청 헤더 정보 출력하기</h2>
   <%
+<%--    getHeaderNames() : request 내장 객체를 통해서 전달된 데이터의 헤더 이름을 모두 가져옴 --%>
+<%--  Enumeration : Iterator와 비슷한 기능을 하는 클래스 --%>
     Enumeration headers = request.getHeaderNames();
 
+<%--  hasMoreElements() : iterator의 hasNext()와 같은 기능, 출력할 데이터가 있는지 여부를 확인 --%>
     while (headers.hasMoreElements()) {
+<%--  nextElement() : iterator의 next()와 같은 기능, 저장된 데이터 중 하나를 출력함 --%>
       String headerName = (String) headers.nextElement();
+<%--  getHeader(헤더명) : 지정한 헤더명과 같은 이름의 헤더의 데이터를 출력 --%>
       String headerValue = request.getHeader(headerName);
       out.print("헤더명 : " + headerName + ", 헤더값 : " + headerValue + "<br>");
     }

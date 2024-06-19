@@ -37,10 +37,11 @@
     <button type="submit" class="btn btn-primary">확인</button>
   </form>
 
-  <h2>2. 클라이언트의 요ㅛ청 매개변수 읽기</h2>
+  <h2>2. 클라이언트의 요청 매개변수 읽기</h2>
   <form action="RequestParameter.jsp" method="POST">
     <div class="my-3">
       <label for="id" class="form-label">아이디 : </label>
+<%--      input 태그의 name 속성은 서버에서 데이터를 구분하는 변수명으로 사용됨 --%>
       <input type="text" class="form-control" id="id" name="id">
     </div>
     <div class="my-3">
@@ -57,6 +58,7 @@
     <div class="my-3">
       <label class="form-label">관심사항 : </label>
       <div class="form-check form-check-inline">
+<%--        input 태그의 type이 checkbox 일 경우 input 태그들의 name 속성값이 동일하면 서버 데이터 전송 시 배열로 전달함 --%>
         <input type="checkbox" class="form-check-input" id="favo1" name="favo" value="eco">
         <label for="favo1" class="form-check-label">경제</label>
       </div>
