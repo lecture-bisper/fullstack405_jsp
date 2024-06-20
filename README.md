@@ -17,3 +17,10 @@
    4. application 객체
    5. exception 객체
    6. page 영역
+3. 3일차 수업 (study03)
+   1. request 영역
+   2. session 영역
+   3. application 영역
+   4. 쿠키 사용하기
+   5. 쿠키를 사용하여 팝업창 관리하기
+   6. 쿠키를 사용하여 id 저장하기
