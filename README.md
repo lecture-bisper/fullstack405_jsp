@@ -29,3 +29,10 @@
    2. 데이터베이스 연동 (jdbc connector 빌드 시스템으로 등록)
    3. 데이터베이스에 insert 하기
    4. 데이터베이스에서 select 하기
+5. 5일차 수업 (study04)
+   1. 데이터베이스에서 update 하기
+   2. 데이터베이스에서 delete 하기
+   3. PreparedStatement 사용하기
+   4. PreparedStatement 재활용하기
+   5. DB 접속 개선하기
+   6. ConnectionPool 사용하기
