@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/">
+
+<!--    server.xml 파일에 입력된 커넥션 풀의 내용을 context.xml 파일이 대신 받아서 jsp 에서 사용할 수 있도록 중계-->
+<!--    name : 커넥션 풀 class 파일에서 lookup()으로 확인하는 이름 -->
+<!--    global : server.xml에 입력된 name 속성 값 -->
+    <ResourceLink
+            name="context_dbcp_mysql"
+            global="global_dbcp_mysql"
+            type="javax.sql.DataSource"
+    />
+<!--    server.xml 파일에 입력하는 내용을 context.xml에 직접 입력하여 사용 -->
+    <Resource
+            name="dbcp_mysql"
+            auth="Container"
+            initialSize="0"
+            minIdle="5"
+            maxIdle="20"
+            maxTotal="20"
+            maxWaitMillis="5000"
+            driverClassName="com.mysql.cj.jdbc.Driver"
+            type="javax.sql.DataSource"
+            url="jdbc:mysql://localhost:3306/testdb1?characterEncoding=UTF-8&amp;serverTimezone=UTC"
+            username="test1"
+            password="full405"
+    />
+</Context>
