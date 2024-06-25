@@ -36,3 +36,8 @@
    4. PreparedStatement 재활용하기
    5. DB 접속 개선하기
    6. ConnectionPool 사용하기
+6. 6일차 수업 (study06)
+   1. 세션 사용해보기
+   2. 세션을 통한 로그인 1
+   3. 세션을 통한 로그인 2 (DTO, DAO 사용)
+   4. 회원 가입 추가
