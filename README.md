@@ -41,3 +41,9 @@
    2. 세션을 통한 로그인 1
    3. 세션을 통한 로그인 2 (DTO, DAO 사용)
    4. 회원 가입 추가
+7. 7일차 수업 (study07)
+   1. 액션 태그 include
+   2. 액션 태그 forward
+   3. 액션 태그 useBean, setProperty, getProperty
+   4. 액션 태그 param
+   5. 회원제 게시판 만들기 (전체 목록 보기, 상세 보기, 글쓰기)
