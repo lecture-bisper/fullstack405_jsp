@@ -7,6 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 
+<%--  로그인 정보가 있을 때만 글쓰기가 가능하기 때문에 세션에 로그인 정보가 있는지 확인 --%>
+<jsp:include page="./login/LoginCheck.jsp"></jsp:include>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -33,33 +36,8 @@
 </head>
 <body>
 
-<header class="px-sm-5 text-center" style="margin-top: 100px">
-  <div class="container">
-    <div class="rounded-3 bg-secondary bg-opacity-25 px-4 py-5">
-      <h1 class="display-4">회원제 게시판 글쓰기 페이지</h1>
-    </div>
-  </div>
-</header>
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <div class="container-fluid">
-    <a href="List.jsp" class="navbar-brand">게시판</a>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a href="#" class="nav-link">메뉴 1</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link">메뉴 2</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link">메뉴 3</a>
-      </li>
-    </ul>
-    <div class="ms-auto">
-      <a href="#" class="btn btn-outline-success">로그인</a>
-    </div>
-  </div>
-</nav>
+<%@ include file="layout/Header.jsp" %>
+<%@ include file="layout/Menu.jsp" %>
 
 <main class="container mt-5">
   <section>
@@ -88,9 +66,8 @@
   </section>
 </main>
 
-<footer class="border-top mt-sm-5 p-sm-5">
-  <p class="lead text-muted text-center">made by fullstack405</p>
-</footer>
+<jsp:include page="layout/Footer.jsp"></jsp:include>
+
 </body>
 </html>
 

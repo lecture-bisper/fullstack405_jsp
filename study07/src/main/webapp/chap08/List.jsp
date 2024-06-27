@@ -13,11 +13,17 @@
 <%@ page import="java.util.List" %>
 
 <%
+  // 게시물 목록 정보를 가져오기 위한 변수 선언
+//  데이터베이스의 board 테이블과 연동되어 있는 BoardDTO 클래스 타입의 데이터를 List 넣어서 여러개의 데이터를 한번에 가져옴
   List<BoardDTO> boardList = null;
 
+//  데이터베이스의 board 테이블을 컨트롤하는 DAO 클래스인 BoardDAO 클래스 타입의 객체를 사용
   BoardDAO dao = new BoardDAO();
+//  데이터베이스 연결
   dao.dbOpen();
+//  전체 게시물 정보 가져옴
   boardList = dao.selectBoardList();
+//  데이터베이스 연결 종료
   dao.dbClose();
 %>
 
@@ -36,33 +42,9 @@
 </head>
 <body>
 
-<header class="px-sm-5 text-center" style="margin-top: 100px">
-  <div class="container">
-    <div class="rounded-3 bg-secondary bg-opacity-25 px-4 py-5">
-      <h1 class="display-4">회원제 게시판 리스트 페이지</h1>
-    </div>
-  </div>
-</header>
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <div class="container-fluid">
-    <a href="List.jsp" class="navbar-brand">게시판</a>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a href="#" class="nav-link">메뉴 1</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link">메뉴 2</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link">메뉴 3</a>
-      </li>
-    </ul>
-    <div class="ms-auto">
-      <a href="#" class="btn btn-outline-success">로그인</a>
-    </div>
-  </div>
-</nav>
+<%-- 디렉티브 태그 (지시어) 로 사용한 include 는 외부 파일을 복사하여 현재 파일에 포함 --%>
+<%@ include file="layout/Header.jsp" %>
+<%@ include file="layout/Menu.jsp" %>
 
 <main class="container mt-5">
   <section>
@@ -86,6 +68,7 @@
             </tr>
           </thead>
           <tbody>
+<%--          가져온 전체 게시물 정보를 for 문을 사용하여 출력--%>
             <%
               for (BoardDTO item : boardList) {
             %>
@@ -115,9 +98,8 @@
   </section>
 </main>
 
-<footer class="border-top mt-sm-5 p-sm-5">
-  <p class="lead text-muted text-center">made by fullstack405</p>
-</footer>
+<jsp:include page="layout/Footer.jsp"></jsp:include>
+
 </body>
 </html>
 
