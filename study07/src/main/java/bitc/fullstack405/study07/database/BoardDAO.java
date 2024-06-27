@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // 데이터베이스의 board 테이블의 정보를 컨트롤하기 위한 클래스
+// 데이터베이스 접속 정보 및 연결 메소드를 JDBConnect 클래스에서 상속받음
 public class BoardDAO extends JDBConnect {
 
   public BoardDAO() {
@@ -131,8 +132,59 @@ public class BoardDAO extends JDBConnect {
   }
 
 //  게시판 글 수정 메소드
+  public int updateBoard(BoardDTO board) {
+    int result = 0;
+
+    try {
+      String sql = "UPDATE board ";
+      sql += "SET title = ?, content = ?, postdate = now() ";
+      sql += "WHERE num = ? ";
+
+      pstmt = conn.prepareStatement(sql);
+      pstmt.setString(1, board.getTitle());
+      pstmt.setString(2, board.getContent());
+      pstmt.setInt(3, board.getNum());
+
+      result = pstmt.executeUpdate();
+    }
+    catch (SQLException e) {
+      System.out.println("데이터베이스 수정 중 오류가 발생했습니다.");
+      e.printStackTrace();
+    }
+    finally {
+      try {
+        if (pstmt != null) { pstmt.close(); }
+        if (conn != null) { conn.close(); }
+      }
+      catch (Exception e) {}
+    }
+
+    return result;
+  }
 
 //  게시판 글 삭제 메소드
+  public int deleteBoard(int num) {
+    int result = 0;
+
+    try {
+      String sql = "DELETE FROM board WHERE num = " + num + " ";
+      stmt = conn.createStatement();
+      result = stmt.executeUpdate(sql);
+    }
+    catch (SQLException e) {
+      System.out.println("데이터베이스에서 삭제 중 오류가 발생했습니다.");
+      e.printStackTrace();
+    }
+    finally {
+      try {
+        if (stmt != null) { stmt.close(); }
+        if (conn != null) { conn.close(); }
+      }
+      catch (Exception e) {}
+    }
+
+    return result;
+  }
 }
 
 

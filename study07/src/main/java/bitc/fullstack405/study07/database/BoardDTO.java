@@ -1,5 +1,6 @@
 package bitc.fullstack405.study07.database;
 
+// 데이터베이스의 board 테이블과 연동되도록 필드를 선언
 public class BoardDTO {
   private int num;
   private String title;
