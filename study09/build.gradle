@@ -1,0 +1,53 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'bitc.fullstack405'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.10.0'
+}
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    compileOnly('jakarta.servlet:jakarta.servlet-api:6.0.0')
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
+    // https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jsp-api
+    implementation 'org.apache.tomcat:tomcat-jsp-api:10.1.24'
+
+//    tomcat 9, tomcat 10 버전에서 사용하는 JSTL
+    // https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api
+    implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0'
+
+//    tomcat 9, tomcat 10 버전에서 사용하는 JSTL
+    // https://mvnrepository.com/artifact/org.glassfish.web/jakarta.servlet.jsp.jstl
+    implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1'
+
+//    JSTL 옛날 버전 사용 시 (tomcat 8까지)
+    // https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl-api
+//    implementation 'javax.servlet.jsp.jstl:jstl-api:1.2'
+
+//    JSTL 옛날 버전 사용 시 (tomcat 8까지)
+    // https://mvnrepository.com/artifact/org.glassfish.web/jstl-impl
+//    runtimeOnly 'org.glassfish.web:jstl-impl:1.2'
+
+}
+
+test {
+    useJUnitPlatform()
+}
