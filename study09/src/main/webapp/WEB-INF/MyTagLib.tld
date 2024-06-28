@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0"
+        xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xml="http://www.w3.org/XML/1998/namespace"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+    <tlib-version>1.0</tlib-version>
+    <short-name>mytag</short-name>
+<!--    function을 여러개 선언할 수 있음 -->
+    <function>
+<!--        메소드 명 입력 -->
+        <name>isNumber</name>
+<!--        클래스명 입력, 패키지명 포함하여 전체 경로로 입력 -->
+        <function-class>bitc.fullstack405.study09.MyELClass</function-class>
+<!--        메소드의 선언부를 입력-->
+        <function-signature>boolean isNumber(java.lang.String)</function-signature>
+    </function>
+</taglib>
