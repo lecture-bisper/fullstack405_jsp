@@ -59,3 +59,11 @@
    3.  EL에서 연산하기
    4.  EL에서 메소드 호출하기, 정적메소드 호출하기
    5.  JSTL 사용하기, JSTL core의 set
+10. 10일차 수업 (study1)
+    1.  JSTL core - remove
+    2.  JSTL core - if, choose
+    3.  JSTL core - forEach, forTokens
+    4.  JSTL core - import, redirect, url
+    5.  JSTL core - out, catch
+    6.  JSTL formatting - formatNumber/parseNumber
+    7.  JSTL formatting - formatDate, timezone, locale
