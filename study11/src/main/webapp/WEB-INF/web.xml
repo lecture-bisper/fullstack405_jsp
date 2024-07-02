@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+<!--    서블릿 이름과 서블릿 클래스 파일을 등록 -->
+    <servlet>
+<!--        서블릿 이름 설정, <servlet-mapping> 태그의 <servlet-name>과 동일한 이름 사용 -->
+        <servlet-name>TestServlet</servlet-name>
+<!--        서블릿 클래스 파일 설정, 반드시 패키지명과 클래스명을 다 입력 -->
+        <servlet-class>bitc.fullstack405.study11.servlet.TestServlet</servlet-class>
+    </servlet>
+
+<!--    서블릿 이름과 클라이언트에서 접속할 URL을 설정 -->
+    <servlet-mapping>
+<!--        서블릿 이름 설정, <servlet> 태그의 <servlet-name>과 동일한 이름 사용 -->
+        <servlet-name>TestServlet</servlet-name>
+<!--        클라이언트에서 접속 시 사용할 URL -->
+<!--        실제 파일 구조를 웹브라우저에 표시하지 않음 -->
+        <url-pattern>/TestServlet.do</url-pattern>
+    </servlet-mapping>
+
+
+<!--    데이터베이스 접속정보-->
+    <context-param>
+        <param-name>MySqlDriver</param-name>
+        <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>MySqlUrl</param-name>
+        <param-value>jdbc:mysql://localhost:3306/testdb1?characterEncoding=UTF-8&amp;serverTimezone=UTC</param-value>
+    </context-param>
+    <context-param>
+        <param-name>MySqlUser</param-name>
+        <param-value>test1</param-value>
+    </context-param>
+    <context-param>
+        <param-name>MySqlPass</param-name>
+        <param-value>full405</param-value>
+    </context-param>
+
+<!--    admin 계정 ID -->
+    <context-param>
+        <param-name>admin_id</param-name>
+        <param-value>test1</param-value>
+    </context-param>
+</web-app>
+
+
+
+
+
+
+
+
+
+

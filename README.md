@@ -67,3 +67,10 @@
     5.  JSTL core - out, catch
     6.  JSTL formatting - formatNumber/parseNumber
     7.  JSTL formatting - formatDate, timezone, locale
+11. 11일차 수업 (study11)
+    1.  서블릿 사용해보기, 필요한 종속성 추가, web.xml 내용 추가
+    2.  @WebServlet 어노테이션으로 서블릿 사용하기
+    3.  jsp 페이지와 서블릿으로 로그인페이지 만들기
+    4.  하나의 서블릿 파일로 여러개의 요청 처리하기
+    5.  서블릿 생명주기
+    6.  서블릿과 DB 연동하기
