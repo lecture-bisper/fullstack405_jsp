@@ -81,3 +81,11 @@
     4.  파일 업로드 : 파일 업로드 처리용 서블릿 생성, 사용자 입력 form 생성
     5.  파일 업로드 & 다운로드 : 파일 목록 페이지 생성, 다운로드 처리용 페이지 생성, 자바스크립트 사용 클래스 생성
     6.  파일 업로드 & 다운로드 : 다중 업로드용 form 페이지 생성, 다중 업로드 처리용 서블릿 생성
+13. 13일차 수업 (study13)
+    1.  MVC2 방식 게시판 : 프로젝트 생성, 종속성 추가, web.xml 설정
+    2.  MVC2 방식 게시판 : DB 접속용 클래스, DTO, DAO 추가
+    3.  MVC2 방식 게시판 : layout 파일, FileUtil.java, JSFunction.java 추가
+    4.  MVC2 방식 게시판 : 서블릿 ListController.java 추가, 뷰 List.jsp 추가
+    5.  MVC2 방식 게시판 : 서블릿 WriteController.java 추가, 뷰 Write.jsp 추가
+    6.  MVC2 방식 게시판 : 서블릿 ViewController.java 추가, 뷰 View.jsp 추가
+    7.  MVC2 방식 게시판 : 서블릿 DownloadController.java 추가, 서블릿 PassController 추가, 뷰 Pass.jsp 추가

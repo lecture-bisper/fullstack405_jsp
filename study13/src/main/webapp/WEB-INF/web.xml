@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    <context-param>
+        <param-name>MySqlDriver</param-name>
+        <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>MySqlUrl</param-name>
+        <param-value>jdbc:mysql://localhost:3306/testdb1?characterEncoding=UTF-8&amp;serverTimezone=UTC</param-value>
+    </context-param>
+    <context-param>
+        <param-name>MySqlUserId</param-name>
+        <param-value>test1</param-value>
+    </context-param>
+    <context-param>
+        <param-name>MySqlUserPw</param-name>
+        <param-value>full405</param-value>
+    </context-param>
+    <context-param>
+        <param-name>FileUploadDirectory</param-name>
+        <param-value>C:/upload</param-value>
+    </context-param>
+</web-app>
