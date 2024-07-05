@@ -27,18 +27,23 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 
+//    tomcat에서 제공하는 jsp api 라이브러리
     // https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jsp-api
     implementation 'org.apache.tomcat:tomcat-jsp-api:10.1.24'
 
+//    jsp의 jstl 라이브러리 (최신버전)
     // https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api
     implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0'
 
+//    jsp의 jstl 라이브러리 (최신버전)
     // https://mvnrepository.com/artifact/org.glassfish.web/jakarta.servlet.jsp.jstl
     implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1'
 
+//    추가 어노테이션 라이브러리
     // https://mvnrepository.com/artifact/jakarta.annotation/jakarta.annotation-api
     implementation 'jakarta.annotation:jakarta.annotation-api:3.0.0'
 
+//    mysql 커넥터 라이브러리
     // https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
     implementation 'com.mysql:mysql-connector-j:8.4.0'
 

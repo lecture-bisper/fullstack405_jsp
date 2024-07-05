@@ -22,16 +22,23 @@
           crossorigin="anonymous"></script>
 
   <script>
+      // addEventListener() : 자바스크립트에서 제공하는 이벤트 등록 함수
+    //   DOMContentLoaded : html 문서의 html 태그가 모두 로드되고 난 후 동작하는 이벤트
     document.addEventListener("DOMContentLoaded", function () {
+        // querySelector() : 자바스크립트에서 제공하는 html 태그를 검색하는 함수, id, class, 태그명으로 모두 검색
+        // querySelectorAll() : querySelector()와 동일한 기능이지만 검색되는 모든 태그를 다 가져옴
+        // getElementById() : 자바스크립트에서 제공하는 html 태그를 검색하는 함수, id 속성값으로 검색
         const btnList = document.querySelector("#btn-list");
         const btnDelete = document.querySelector("#btn-delete");
         const btnEdit = document.querySelector("#btn-edit");
 
         btnList.addEventListener("click", function() {
+          //   지정한 주소로 이동, get 방식으로 접속
           location.href = "/mvcboard/list.do";
         });
 
         btnDelete.addEventListener("click", function () {
+          //   지정한 주소로 이동, 파라미터로 mode, idx를 전달함
           location.href = "/mvcboard/pass.do?mode=delete&idx=${board.idx}";
         });
 
@@ -49,6 +56,7 @@
   <section>
     <div class="row mt-3">
       <div class="col-sm">
+<%--        서블릿에서 request 영역에 저장하여 전달한 데이터 board 를 화면에 출력--%>
         <input type="text" class="form-control" id="title" name="title" value="${board.title}" readonly>
       </div>
     </div>
@@ -68,10 +76,12 @@
         <textarea class="form-control" id="content" name="content" rows="5" readonly>${board.content}</textarea>
       </div>
     </div>
+<%--    jstl의 if 문을 사용하여 저장된 파일 정보가 있을 경우에만 아래의 내용 출력 --%>
     <c:if test="${not empty board.oFile}">
       <div class="row mt-3">
         <div class="col-sm">
           <div class="border rounded">
+<%--            해당 목록을 클릭 시 /mvcboard/download.do 을 사용하는 서블릿으로 이동 --%>
             <a href="/mvcboard/download.do?idx=${board.idx}&ofile=${board.oFile}&sfile=${board.sFile}" class="btn btn-link">${board.oFile} (다운로드 수 : ${board.downCount})</a>
           </div>
         </div>

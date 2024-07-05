@@ -23,6 +23,7 @@
 </head>
 <body>
 
+<%-- header 부분을 import 하여 사용 --%>
 <c:import url="../layout/Header.jsp"></c:import>
 
 <main class="container mt-5">
@@ -47,17 +48,21 @@
           </tr>
           </thead>
           <tbody>
+<%--          jstl의 choose 를 사용하여 게시물 정보가 있는지 확인 --%>
           <c:choose>
+<%--            empty : EL언어에서 제공하는 연산자, 피연산자가 비었는지 아닌지 확인 --%>
             <c:when test="${empty boardList}">
               <tr>
                 <td colspan="5">등록된 게시물이 없습니다.</td>
               </tr>
             </c:when>
             <c:otherwise>
+<%--              jstl의 forEach를 사용하여 게시물 내용을 반복적으로 출력 --%>
               <c:forEach var="item" items="${boardList}" varStatus="loop">
                 <tr>
                   <td>${item.idx}</td>
                   <td class="text-start">
+<%--                    제목 부분에 a 태그를 사용하여 /mvcboard/view.do 를 사용하는 서블릿으로 이동, 이동 시 게시물의 글 번호을 전달함 --%>
                     <a href="/mvcboard/view.do?idx=${item.idx}" class="text-decoration-none">${item.title}</a>
                   </td>
                   <td>${item.name}</td>
@@ -74,6 +79,7 @@
     <div class="row">
       <div class="col-sm">
         <div class="d-flex justify-content-end">
+<%--          지정한 url로 이동, 현재 /mvcboard/write.do 주소를 사용하는 서블릿으로 이동 --%>
           <a href="/mvcboard/write.do" class="btn btn-primary">글쓰기</a>
         </div>
       </div>

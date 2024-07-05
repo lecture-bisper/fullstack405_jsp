@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+//DB의 mvcboard 테이블의 제어하기 위한 DAO 클래스
 public class MVCBoardDAO extends JDBConnect {
   public MVCBoardDAO() {}
 
@@ -19,25 +20,33 @@ public class MVCBoardDAO extends JDBConnect {
 
 //  전체 게시물 목록 가져오기
   public List<MVCBoardDTO> selectBoardList() {
+//    전체 게시물 목록을 저장할 List 타입의 변수
     List<MVCBoardDTO> boardList = new ArrayList<MVCBoardDTO>();
 
     try {
+//      전체 게시물 목록 조회용 SQL 쿼리
       String sql = "SELECT idx, name, title, postdate, visitcount FROM mvcboard ";
       sql += "ORDER BY idx DESC ";
 
+//      PreparedStatement 객체 생성
       pstmt = conn.prepareStatement(sql);
-
+      
+//      DB로 생성된 SQL 문을 전달 및 결과 가져오기
       rs = pstmt.executeQuery();
 
+//      가져온 결과를 반복문으로 하나씩 출력
       while (rs.next()) {
+//        MVCBoardDTO 타입의 객체 생성
         MVCBoardDTO board = new MVCBoardDTO();
 
+//        DB에서 가져온 내용을 MVCBoardDTO 타입의 객체에 저장
         board.setIdx(rs.getInt("idx"));
         board.setName(rs.getString("name"));
         board.setTitle(rs.getString("title"));
         board.setPostDate(rs.getString("postdate"));
         board.setVisitCount(rs.getInt("visitcount"));
 
+//        List에 결과를 추가
         boardList.add(board);
       }
     }

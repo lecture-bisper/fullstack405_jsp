@@ -38,6 +38,8 @@
   <section>
     <div class="row">
       <div class="col-sm">
+<%--        /mvcboard/write.do 라는 주소를 사용하는 서블릿으로 데이터를 전송 --%>
+<%--        데이터 전달 방식은 post, 데이터 타입은 multipart/form-data --%>
         <form action="/mvcboard/write.do" method="post" enctype="multipart/form-data">
           <div class="row mt-3">
             <div class="col-sm">

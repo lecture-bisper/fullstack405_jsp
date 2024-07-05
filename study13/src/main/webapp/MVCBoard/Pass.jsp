@@ -34,6 +34,7 @@
             <div class="col-sm-6 mx-auto">
               <div class="input-group">
                 <div class="form-floating">
+<%--                  수정 및 삭제를 위해서 비밀번호를 입력받음 --%>
                   <input type="password" class="form-control" id="pass" name="pass" placeholder="비밀번호를 입력해주세요">
                   <label for="pass">비밀번호를 입력해주세요</label>
                 </div>
@@ -41,6 +42,7 @@
               </div>
             </div>
           </div>
+<%--          form을 통해서 현재 모드와 게시글 번호를 전달함, 화면에는 출력하지 않음 --%>
           <input type="hidden" name="mode" value="${mode}">
           <input type="hidden" name="idx" value="${idx}">
         </form>

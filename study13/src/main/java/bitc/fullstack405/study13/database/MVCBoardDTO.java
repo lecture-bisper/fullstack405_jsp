@@ -1,5 +1,6 @@
 package bitc.fullstack405.study13.database;
 
+//DB의 mvcboard 테이블과 데이터를 주고 받기 위한 DTO 클래스
 public class MVCBoardDTO {
   private int idx;
   private String name;
