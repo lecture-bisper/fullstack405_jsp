@@ -89,3 +89,6 @@
     5.  MVC2 방식 게시판 : 서블릿 WriteController.java 추가, 뷰 Write.jsp 추가
     6.  MVC2 방식 게시판 : 서블릿 ViewController.java 추가, 뷰 View.jsp 추가
     7.  MVC2 방식 게시판 : 서블릿 DownloadController.java 추가, 서블릿 PassController 추가, 뷰 Pass.jsp 추가
+14. 14일차 수업 (study13)
+    1.  MVC2 방식 게시판 : 서블릿 EditController.java 추가, 뷰 Edit.jsp 추가
+    2.  모든 파일에 주석 추가
